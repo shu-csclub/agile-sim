@@ -7,7 +7,7 @@ app = Flask(__name__)
 database.init()
 services.init()
 
-version = 'v0.0.0'
+version = 'v0.1.0'
 
 @app.route("/books")
 def getAllBooks():
