@@ -4,10 +4,12 @@ import api
 import database
 import services
 
-app = Flask(__name__)
-app.config.from_file("config.json", load=json.load)
+def create_app():
+    app = Flask(__name__)
+    app.config.from_file("config.json", load=json.load)
 
-api.init(app)
+    database.init_app(app)
+    services.init_app(app)
+    api.init_app(app)
 
-database.init()
-services.init()
+    return app

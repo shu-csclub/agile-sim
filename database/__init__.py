@@ -1,7 +1,8 @@
 import pandas as pd
+from flask import Flask
 
 
-def init():
+def init_app(app: Flask):
     global books
     global games
     global shows
