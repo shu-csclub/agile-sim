@@ -1,7 +1,8 @@
 from flask import Blueprint
 import services
 
-shows = Blueprint('shows', __name__)
+shows = Blueprint("shows", __name__)
+
 
 @shows.route("/")
 def getAllShows():
