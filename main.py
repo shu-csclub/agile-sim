@@ -1,26 +1,13 @@
 from flask import Flask
+import json
+import api
 import database
 import services
 
 app = Flask(__name__)
+app.config.from_file("config.json", load=json.load)
+
+api.init(app)
 
 database.init()
 services.init()
-
-version = 'v0.1.0'
-
-@app.route("/books")
-def getAllBooks():
-    return services.bookService.getAll()
-
-@app.route("/books/popular")
-def getPopularBooks():
-    return services.bookService.getPopularBooks()
-
-@app.route("/games")
-def getAllGames():
-    return services.gameService.getAll()
-
-@app.route("/shows")
-def getAllShows():
-    return services.showService.getAll()
