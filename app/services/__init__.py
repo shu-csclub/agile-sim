@@ -1,6 +1,6 @@
-from services.BookService import BookService
-from services.GameService import GameService
-from services.ShowService import ShowService
+from app.services.BookService import BookService
+from app.services.GameService import GameService
+from app.services.ShowService import ShowService
 from flask import Flask
 
 

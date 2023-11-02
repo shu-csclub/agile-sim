@@ -1,5 +1,5 @@
 from flask import Blueprint
-import services
+from app import services
 
 books = Blueprint("book", __name__)
 
@@ -9,6 +9,6 @@ def getAllBooks():
     return services.bookService.getAll()
 
 
-@books.route("/popular")
-def getPopularBooks():
-    return services.bookService.getPopularBooks()
+@books.route("/recommended")
+def getRecommendedBooks():
+    return services.bookService.getRecommended()

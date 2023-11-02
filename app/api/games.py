@@ -1,5 +1,5 @@
 from flask import Blueprint
-import services
+from app import services
 
 games = Blueprint("games", __name__)
 

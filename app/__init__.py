@@ -1,8 +1,7 @@
-from flask import Flask
 import json
-import api
 import database
-import services
+from flask import Flask
+from app import api, services
 
 def create_app():
     app = Flask(__name__)
