@@ -10,3 +10,10 @@ class ShowService:
     
     def getOld(self):
         return database.shows[(database.shows.year < 2006)].to_dict(orient="records")
+
+    def getServices(self):
+        return [
+            "netflix",
+            "hulu",
+            "disney_plus",
+        ]

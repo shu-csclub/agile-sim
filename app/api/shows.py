@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, abort
 from app import services
 
 shows = Blueprint("shows", __name__)
@@ -12,3 +12,8 @@ def getAllShows():
 @shows.route("/old")
 def getOldShows():
     return services.showService.getOld()
+
+
+@shows.route("/services")
+def getAllServices():
+    return services.showService.getServices()
