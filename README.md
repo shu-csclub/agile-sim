@@ -1,5 +1,7 @@
 # Agile Simulation
 
+[![Python application](https://github.com/shu-csclub/agile-sim/actions/workflows/ci.yml/badge.svg)](https://github.com/shu-csclub/agile-sim/actions/workflows/ci.yml)
+
 ## Installation
 
 ```bash
