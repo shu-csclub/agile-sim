@@ -16,4 +16,6 @@ def getOldShows():
 
 @shows.route("/services")
 def getAllServices():
-    return services.showService.getServices()
+    return {
+        "services": services.showService.getServices()
+    }
