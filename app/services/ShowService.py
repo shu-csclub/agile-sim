@@ -7,3 +7,6 @@ class ShowService:
 
     def getAll(self):
         return database.shows.to_dict(orient="records")
+    
+    def getOld(self):
+        return database.shows[(database.shows.year < 2006)].to_dict(orient="records")

@@ -7,3 +7,8 @@ shows = Blueprint("shows", __name__)
 @shows.route("/")
 def getAllShows():
     return services.showService.getAll()
+
+
+@shows.route("/old")
+def getOldShows():
+    return services.showService.getOld()
