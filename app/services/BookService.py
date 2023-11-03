@@ -11,7 +11,7 @@ class BookService:
     def getRecommended(self):
         return (
             database.books[
-                (database.books.average_rating > 3.75)
+                (database.books.average_rating > 4.5)
                 & (database.books.text_reviews_count > 10000)
             ]
             .sort_values(by=["average_rating"], ascending=False)
