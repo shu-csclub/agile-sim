@@ -9,7 +9,10 @@ def init_app(app: Flask):
 
     @api.route("/")
     def index():
-        return {"name": "Agile Sim", "version": current_app.config["APPLICATION_VERSION"]}
+        return {
+            "name": "Agile Sim",
+            "version": current_app.config["APPLICATION_VERSION"],
+        }
 
     api.register_blueprint(books, url_prefix="/books")
     api.register_blueprint(games, url_prefix="/games")
