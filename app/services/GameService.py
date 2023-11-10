@@ -7,3 +7,6 @@ class GameService:
 
     def getAll(self):
         return database.games.to_dict(orient="records")
+
+    def getUniqueGenres(self):
+        return list(database.games.genre.unique())
