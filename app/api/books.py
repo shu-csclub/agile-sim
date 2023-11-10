@@ -12,3 +12,9 @@ def getAllBooks():
 @books.route("/recommended")
 def getRecommendedBooks():
     return services.bookService.getRecommended()
+
+@books.route("/publishers")
+def getUniquePublishers():
+    return {
+        "publishers": services.bookService.getUniquePublishers()
+    }

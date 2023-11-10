@@ -17,3 +17,8 @@ class BookService:
             .sort_values(by=["average_rating"], ascending=False)
             .to_dict(orient="records")
         )
+
+    def getUniquePublishers(self):
+        return (
+            list(database.books.publisher.unique())
+        )
